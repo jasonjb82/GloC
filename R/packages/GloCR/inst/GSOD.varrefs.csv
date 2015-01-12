@@ -1,0 +1,15 @@
+procseq,variable,dbase,stpos,enpos,missing,datatype
+1,YEARMODA,wdate,15,22,,Int
+2,TEMP,tavg,25,30,9999.9,Real
+3,SLP,slpressure,47,52,9999.9,Real
+4,STP,stpressure,58,63,9999.9,Real
+5,DEWP,tdew,36,41,9999.9,Real
+6,VISIB,visibility,69,73,999.9,Real
+7,WDSP,wind,79,83,999.9,Real
+8,MXSPD,maxwind,89,93,999.9,Real
+9,GUST,gust,96,100,999.9,Real
+10,MAX,tmax,103,108,9999.9,Real
+11,MIN,tmin,111,116,9999.9,Real
+12,PRCP,prec,119,123,99.99,Real
+13,SNDP,snowdepth,126,130,999.9,Real
+14,FRSHTT,,133,138,,Int

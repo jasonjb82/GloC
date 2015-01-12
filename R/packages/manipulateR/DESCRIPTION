@@ -1,0 +1,11 @@
+Package: manipulateR
+Type: Package
+Title: IRRI Geography Lab - General Manipulation functions
+Version: 0.1.0
+Date: 2011-10-19
+Depends: methods
+Author: Jorrel Khalil S. Aunario
+Maintainer: <jaunario@gmail.com>
+Description: manipulateR (previously General Utilities - genutils) package is a collection of commonly used basic processes like cleaning, extracting, and formatting data.
+License: GPL (>=2)
+LazyLoad: yes
