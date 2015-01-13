@@ -64,13 +64,6 @@
 	return(data)
 }
 
-if ( !isGeneric("geoclimate.fetch") ) {
-	setGeneric("geoclimate.fetch", function(xy, srcvars, connection, ...)
-				standardGeneric("geoclimate.fetch"))
-}
-
-
-
 #setMethod("geoclimate.fetch", signature(xy="matrix", srcvars="list", connection="RODBC"),
 fetch.monthly <-	function(xy, srcvars, connection, warehouse="geowarehouse",...){
 			

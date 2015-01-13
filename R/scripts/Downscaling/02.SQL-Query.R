@@ -8,7 +8,7 @@
 # remarks       : ;
 ##############################################################################
 
-source('scripts/R/03.Interpolate-TPS.R') #load the function that does the interpolation
+source('03.Interpolate-TPS.R') #load the function that does the interpolation
 
 #con <- odbcConnect(dsn = 'climate_SRV2A') #connect to MySQL server
 

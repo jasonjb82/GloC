@@ -6,9 +6,8 @@
 message("TRMM Upload Started.", appendLF=FALSE)
 upst <- Sys.time()
 #Load libraries
-library(geoclimate)
-library(RCurl)
-#library(sendmailR)
+library(GloC)
+library(mailR)
 library(RODBC)
 
 cargs <- commandArgs(trailing=TRUE)

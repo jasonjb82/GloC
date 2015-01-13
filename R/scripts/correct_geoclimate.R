@@ -14,8 +14,9 @@ library(raster)
 library(fields)
 library(RODBC)
 library(plyr)
+library(manipulateR)
+
 library(compiler)
-library(genutils)
 
 #create global raster object to get id values from for database matching
 #x <- raster()

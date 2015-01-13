@@ -1,10 +1,9 @@
 Package: GlocR
 Type: Package
 Title: Climate and Weather Data Processing at the IRRI GIS Laboratory
-Version: 0.1.0
+Version: 0.1.1
 Date: 2013-6-4
-Depends: methods, manipulateR, RODBC
-Suggests: RCurl
+Depends: methods, manipulateR, RODBC, RCurl
 Author: Jorrel Khalil S. Aunario
 Maintainer: <jaunario@gmail.com>
 Description: [description]

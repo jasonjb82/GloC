@@ -31,3 +31,8 @@ message("Loading Geoclimate System settings")
 if (!exists("databases")) databases <- data.frame(dbms=character(0), host=character(0),port=numeric(0),user=character(0),password=character(0))
 
 # Local Sources
+
+# GSOD settings
+GSOD.ftp <- "ftp://ftp.ncdc.noaa.gov/pub/data/gsod"
+
+

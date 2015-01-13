@@ -5,7 +5,7 @@
 # Update NASA table
 
 #Load libraries
-library(geoclimate)
+library(GloC)
 library(mailR)
 library(RODBC)
 

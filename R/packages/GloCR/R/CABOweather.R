@@ -2,9 +2,9 @@
 # License GPL3
 # Version 0.1  January 2009
 
-write.fse <- function(wth, year, country, stn, author="", src="", target=".", na.val=-99, y2ksafe=1, sradkJ=TRUE, ...){    
-stop('see function writeCABOwth')
-}
+#write.fse <- function(wth, year, country, stn, author="", src="", target=".", na.val=-99, y2ksafe=1, sradkJ=TRUE, ...){    
+#stop('see function writeCABOwth')
+#}
 
 
 writeCABOwth <- function(wth, country='AAA', station=1, wind=2.5,  path=getwd(), print=TRUE, boundlat=TRUE, rainfact=1, tempfact=0) {

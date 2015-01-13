@@ -5,8 +5,7 @@
 # Update GSOD table
 
 #Load libraries
-library(geoclimate)
-library(RCurl)
+library(GloC)
 library(mailR)
 library(RODBC)
 

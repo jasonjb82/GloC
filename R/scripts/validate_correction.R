@@ -3,7 +3,7 @@
 # Description: This validation script is used for windows-based R sessions
 #
 
-library(geoclimate)
+library(GloC)
 library(ggplot2)
 library(RODBC)
 library(DiceEval)

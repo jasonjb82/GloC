@@ -21,8 +21,6 @@ sunhoursToSRad <- function(sunhour, doy, lat, anga, angb){
       
 }
 
-
-
 hargreavesSRad <- function(doy, tmax, tmin, latdd){
     DR <- 1+0.033*cos(pi*2/366*doy)    
     LatRad <- pi/180*latdd

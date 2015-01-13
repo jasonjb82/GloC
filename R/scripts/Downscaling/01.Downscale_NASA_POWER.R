@@ -17,8 +17,8 @@ library(raster)
 boundingbox <- extent(60, 147, -12, 55) #Asia only
 
 #load more libraries and other files
-setwd("/home/gisadmin/Projects/gneo")
-source("lib/load_libraries.R")
+#setwd("C:/users/yourusername")
+source("load_libraries.R")
 
 #NOTE!
 #The script will check to see if files exist in the output directory.
