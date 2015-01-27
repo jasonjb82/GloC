@@ -1,9 +1,3 @@
-#library(RNetCDF)
-
-#library(raster)
-#library(RODBC)
-#library(weather)
-#library(genutils)
 
 cccma.files <- function(..., type="nc"){
     if (!require(ncdf)) stop("Package ncdf not found.")

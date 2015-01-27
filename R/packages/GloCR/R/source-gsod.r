@@ -3,7 +3,7 @@
 # Version 0.0.1
 # Licence GPL v3
 
-GSOD.readStations <- function(stationfile=system.file("GSOD.stations.csv", package="GloC"), rm.nodata=FALSE, rm.nocoords=TRUE){
+GSOD.readStations <- function(stationfile=system.file("GSOD.stations.csv", package="GloCR"), rm.nodata=FALSE, rm.nocoords=TRUE){
     show.message("Reading GSOD station info file.", appendLF=TRUE)					
     stations <- read.csv(stationfile, stringsAsFactors=FALSE)
     if(rm.nodata) stations <- stations[!is.na(stations$BEGIN),]
@@ -36,18 +36,18 @@ GSOD.updateStations <- function(){
 		online <-  unlist(strsplit(getURL("ftp://ftp.ncdc.noaa.gov/pub/data/noaa/"),ifelse(Sys.info()["sysname"]=="Windows","\r\n","\n")))
 		oinfo <- unlist(strsplit(online[grep("ISD-HISTORY.CSV$", online, ignore.case=TRUE)],"[[:space:]]+"))
 		
-		age <- difftime(as.Date(paste(oinfo[6:7], collapse=" "), "%b %d"),file.info(system.file("GSOD.stations.csv", package="GloC"))$ctime, units="weeks")
-		size <- as.numeric(oinfo[5])-file.info(system.file("GSOD.stations.csv", package="GloC"))$size
+		age <- difftime(as.Date(paste(oinfo[6:7], collapse=" "), "%b %d"),file.info(system.file("GSOD.stations.csv", package="GloCR"))$ctime, units="weeks")
+		size <- as.numeric(oinfo[5])-file.info(system.file("GSOD.stations.csv", package="GloCR"))$size
 
 		if (age>2 | size!=0){
-			if(!file.copy(system.file("GSOD.stations.csv", package="GloC"),paste(system.file("GSOD.stations.csv", package="GloC"),".bck",sep=""),overwrite=TRUE)){
+			if(!file.copy(system.file("GSOD.stations.csv", package="GloCR"),paste(system.file("GSOD.stations.csv", package="GloCR"),".bck",sep=""),overwrite=TRUE)){
 				show.message("Unable to create station data backup file. GSOD update process aborted.", appendLF=TRUE)
 			} else {
 				show.message("Downloading station info file from GSOD FTP site.", EL=TRUE, appendLF=FALSE)
-				dl.success <- withRetry(download.file(paste("ftp://ftp.ncdc.noaa.gov/pub/data/noaa/",oinfo[9],sep=""),system.file("GSOD.stations.csv", package="GloC"),mode="wb"))
+				dl.success <- withRetry(download.file(paste("ftp://ftp.ncdc.noaa.gov/pub/data/noaa/",oinfo[9],sep=""),system.file("GSOD.stations.csv", package="GloCR"),mode="wb"))
 				if (dl.success!=0){
 					show.message("Failed to connect GSOD FTP site.", appendLF=TRUE)
-					file.copy(system.file("GSOD.stations.csv.bck", package="GloC"),system.file("GSOD.stations.csv", package="GloC"),overwrite=TRUE)
+					file.copy(system.file("GSOD.stations.csv.bck", package="GloCR"),system.file("GSOD.stations.csv", package="GloCR"),overwrite=TRUE)
 				} 
 				show.message("GSOD Stations info file update complete.", EL=TRUE, appendLF=TRUE)
 				success <- TRUE
@@ -72,7 +72,7 @@ GSOD.updateStations <- function(){
 get.gsod <- function(station, year=as.numeric(format(Sys.Date(),"%Y")), savepath=getwd(), rm.existing=FALSE,...){
 	
 	# Reference to var values for parsing downloaded data
-	GSOD.varrefs <- read.csv(system.file("GSOD.varrefs.csv", package="GloC"), stringsAsFactors=FALSE)
+	GSOD.varrefs <- read.csv(system.file("GSOD.varrefs.csv", package="GloCR"), stringsAsFactors=FALSE)
 	
 	GSOD.stations <- GSOD.readStations()
 	

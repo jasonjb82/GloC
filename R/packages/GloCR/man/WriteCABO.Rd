@@ -33,7 +33,7 @@ Nothing. Used for its side effect of creating files.
 
 
 \examples{
-wth <- getWthFile(system.file("weather/daily_weather_28368.nasa", package = "GloC"))
+wth <- getWthFile(system.file("weather/daily_weather_28368.nasa", package = "GloCR"))
 writeCABOwth(wth)
 }
 
